@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:SwiftlyOutaTime.xcodeproj">
+      location = "self:/Users/nutternotbutter/Documents/Development/SwiftlyOutaTime/SwiftlyOutaTime.xcodeproj">
    </FileRef>
 </Workspace>

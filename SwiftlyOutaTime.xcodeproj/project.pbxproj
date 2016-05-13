@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C19AC301CE61EF700A576A9 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C19AC2F1CE61EF700A576A9 /* DatePickerViewController.swift */; };
 		8C2566AB1CE4F99400275241 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2566AA1CE4F99400275241 /* AppDelegate.swift */; };
 		8C2566AD1CE4F99400275241 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2566AC1CE4F99400275241 /* ViewController.swift */; };
-		8C2566B01CE4F99400275241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2566AE1CE4F99400275241 /* Main.storyboard */; };
 		8C2566B21CE4F99400275241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C2566B11CE4F99400275241 /* Assets.xcassets */; };
 		8C2566B51CE4F99400275241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2566B31CE4F99400275241 /* LaunchScreen.storyboard */; };
+		8C2566BD1CE4F9B200275241 /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C2566BC1CE4F9B200275241 /* digital-7.ttf */; };
+		8C2566BF1CE5062200275241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2566BE1CE5062200275241 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8C2566A71CE4F99400275241 /* SwiftlyOutaTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftlyOutaTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C19AC2F1CE61EF700A576A9 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		8C2566A71CE4F99400275241 /* SwiftlyOutaTime.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftlyOutaTime.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2566AA1CE4F99400275241 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C2566AC1CE4F99400275241 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8C2566AF1CE4F99400275241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C2566B11CE4F99400275241 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C2566B41CE4F99400275241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C2566B61CE4F99400275241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C2566BC1CE4F9B200275241 /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "digital-7.ttf"; path = "../digital-7.ttf"; sourceTree = "<group>"; };
+		8C2566BE1CE5062200275241 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +50,7 @@
 		8C2566A81CE4F99400275241 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8C2566A71CE4F99400275241 /* SwiftlyOutaTime.app */,
+				8C2566A71CE4F99400275241 /* SwiftlyOutaTime.temp_caseinsensitive_rename.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,10 +60,12 @@
 			children = (
 				8C2566AA1CE4F99400275241 /* AppDelegate.swift */,
 				8C2566AC1CE4F99400275241 /* ViewController.swift */,
-				8C2566AE1CE4F99400275241 /* Main.storyboard */,
+				8C19AC2F1CE61EF700A576A9 /* DatePickerViewController.swift */,
 				8C2566B11CE4F99400275241 /* Assets.xcassets */,
 				8C2566B31CE4F99400275241 /* LaunchScreen.storyboard */,
+				8C2566BE1CE5062200275241 /* Main.storyboard */,
 				8C2566B61CE4F99400275241 /* Info.plist */,
+				8C2566BC1CE4F9B200275241 /* digital-7.ttf */,
 			);
 			path = SwiftlyOutaTime;
 			sourceTree = "<group>";
@@ -81,7 +87,7 @@
 			);
 			name = SwiftlyOutaTime;
 			productName = SwiftlyOutaTime;
-			productReference = 8C2566A71CE4F99400275241 /* SwiftlyOutaTime.app */;
+			productReference = 8C2566A71CE4F99400275241 /* SwiftlyOutaTime.temp_caseinsensitive_rename.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -125,7 +131,8 @@
 			files = (
 				8C2566B51CE4F99400275241 /* LaunchScreen.storyboard in Resources */,
 				8C2566B21CE4F99400275241 /* Assets.xcassets in Resources */,
-				8C2566B01CE4F99400275241 /* Main.storyboard in Resources */,
+				8C2566BD1CE4F9B200275241 /* digital-7.ttf in Resources */,
+				8C2566BF1CE5062200275241 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,20 +145,13 @@
 			files = (
 				8C2566AD1CE4F99400275241 /* ViewController.swift in Sources */,
 				8C2566AB1CE4F99400275241 /* AppDelegate.swift in Sources */,
+				8C19AC301CE61EF700A576A9 /* DatePickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8C2566AE1CE4F99400275241 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8C2566AF1CE4F99400275241 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8C2566B31CE4F99400275241 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -255,7 +255,7 @@
 				INFOPLIST_FILE = SwiftlyOutaTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nickperkins.SwiftlyOutaTime;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SwiftlyOutaTime.temp_caseinsensitive_rename;
 			};
 			name = Debug;
 		};
@@ -266,7 +266,7 @@
 				INFOPLIST_FILE = SwiftlyOutaTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nickperkins.SwiftlyOutaTime;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SwiftlyOutaTime.temp_caseinsensitive_rename;
 			};
 			name = Release;
 		};
@@ -289,6 +289,7 @@
 				8C2566BB1CE4F99400275241 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
