@@ -41,6 +41,7 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate {
     @IBAction func travelBackButton(sender: AnyObject) {
         
         //Travel Back in Time!
+        
         startTimer()
         
        self.view.userInteractionEnabled = false
@@ -50,7 +51,10 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate {
         
         //Let the timer begin
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ViewController.updateSpeed), userInfo: nil, repeats: true)
+        if ((timer == nil)) {
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ViewController.updateSpeed), userInfo: nil, repeats: true)
+        }
+        
         
         
     }
@@ -61,7 +65,7 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate {
         //Update Speed here.
         if currentSpeed != 88 {
             
-            currentSpeed += 1
+            currentSpeed += 2
             
             self.speedLabel.text = "\(Int(currentSpeed)) MPH"
             
@@ -114,7 +118,9 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate {
     func decreaseTimer() {
         
         //lower timer
+        if ((timer == nil)) {
         timer = NSTimer.scheduledTimerWithTimeInterval(-0.001, target: self, selector: #selector(ViewController.reduceSpeed), userInfo: nil, repeats: true)
+        }
     }
     
     func acceptData(data: NSDate!) {
