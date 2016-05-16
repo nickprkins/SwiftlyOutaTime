@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, DatePickerViewControllerDelegate {
 
     
+    @IBOutlet weak var promptLabel: UILabel!
     @IBOutlet weak var destinationButton: UIButton!
     @IBOutlet weak var speedLabel: UILabel!
     @IBOutlet weak var lastTimeLabel: UILabel!
@@ -26,6 +27,7 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+            
         self.navigationItem.title = "Time Circuits 2.0"
         self.destinationButton.setTitleColor(UIColor .darkGrayColor(), forState: UIControlState.Normal)
         
@@ -78,6 +80,10 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate {
             self.presentLabel.text = self.destinationButton.titleForState(UIControlState.Normal)
             
             self.destinationButton.setTitleColor(UIColor .darkGrayColor(), forState: UIControlState.Normal)
+            
+            let noneString = "--- -- ----"
+            
+            self.destinationButton.setTitle(noneString, forState: UIControlState.Normal)
             
             
             reduceSpeed()
