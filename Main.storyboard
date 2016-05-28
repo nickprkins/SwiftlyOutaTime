@@ -49,15 +49,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZh-hd-QZz">
-                                <rect key="frame" x="250" y="502" width="98" height="30"/>
-                                <state key="normal" title="TRAVEL BACK">
-                                    <color key="titleColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="travelBackButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hHl-dI-O73"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="--- -- ----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikA-2q-waX">
                                 <rect key="frame" x="217" y="307" width="166" height="37"/>
                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="40"/>
@@ -86,6 +77,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZh-hd-QZz">
+                                <rect key="frame" x="250" y="502" width="98" height="30"/>
+                                <state key="normal" title="TRAVEL BACK">
+                                    <color key="titleColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="151" y="502" width="98" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="travelBackButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hHl-dI-O73"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.20984494686126709" green="0.2098878026008606" blue="0.20984223484992981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -98,8 +101,6 @@
                             <constraint firstItem="0EM-sn-plB" firstAttribute="top" secondItem="FTe-0f-1he" secondAttribute="bottom" constant="20" id="eA8-bS-5aG"/>
                             <constraint firstItem="fEo-pj-t1o" firstAttribute="top" secondItem="ikA-2q-waX" secondAttribute="bottom" constant="20" id="erb-dO-4qs"/>
                             <constraint firstItem="MFA-O1-IHo" firstAttribute="top" secondItem="fEo-pj-t1o" secondAttribute="bottom" constant="10" id="fac-Xh-6p2"/>
-                            <constraint firstItem="dZh-hd-QZz" firstAttribute="top" secondItem="MFA-O1-IHo" secondAttribute="bottom" constant="70" id="gWb-az-leL"/>
-                            <constraint firstItem="MFA-O1-IHo" firstAttribute="centerX" secondItem="dZh-hd-QZz" secondAttribute="centerX" id="ifR-wa-JqQ"/>
                             <constraint firstItem="0EM-sn-plB" firstAttribute="centerX" secondItem="zVA-V1-Se6" secondAttribute="centerX" id="lsb-Rg-ydL"/>
                             <constraint firstItem="FJj-oG-KHX" firstAttribute="centerX" secondItem="FTe-0f-1he" secondAttribute="centerX" id="sSO-8N-sWo"/>
                             <constraint firstItem="ikA-2q-waX" firstAttribute="centerX" secondItem="fEo-pj-t1o" secondAttribute="centerX" id="tDp-fV-Vmc"/>
@@ -115,6 +116,7 @@
                         <outlet property="lastTimeLabel" destination="ikA-2q-waX" id="Lto-zi-VUJ"/>
                         <outlet property="presentLabel" destination="zVA-V1-Se6" id="Atx-kb-iRm"/>
                         <outlet property="speedLabel" destination="MFA-O1-IHo" id="r4u-sk-Xw1"/>
+                        <outlet property="travelBackButton" destination="dZh-hd-QZz" id="dWD-Qx-cvE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

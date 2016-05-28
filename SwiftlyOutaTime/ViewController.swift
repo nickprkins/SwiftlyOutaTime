@@ -11,23 +11,24 @@ import UIKit
 class ViewController: UIViewController, DatePickerViewControllerDelegate {
 
     
+    @IBOutlet weak var travelBackButton: UIButton!
     @IBOutlet weak var promptLabel: UILabel!
     @IBOutlet weak var destinationButton: UIButton!
     @IBOutlet weak var speedLabel: UILabel!
     @IBOutlet weak var lastTimeLabel: UILabel!
     @IBOutlet weak var presentLabel: UILabel!
+    var originalBounds: CGRect!
+    var originalCenter: CGPoint!
     
     var timer = NSTimer?()
     var currentSpeed: Double = 0
     let dateformatter = NSDateFormatter()
     let currentDate = NSDate()
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-            
+        
         self.navigationItem.title = "Time Circuits 2.0"
         self.destinationButton.setTitleColor(UIColor .darkGrayColor(), forState: UIControlState.Normal)
         
@@ -38,15 +39,24 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate {
         
         self.lastTimeLabel.text = "--- -- ----"
         
+        travelBackButton.enabled = false
+        originalBounds = self.travelBackButton.bounds;
+        originalCenter = self.travelBackButton.center;
+        
     }
+    
     
     @IBAction func travelBackButton(sender: AnyObject) {
         
-        //Travel Back in Time!
+        //Travel Back in Time
+        
+        animateTravelBackButton()
         
         startTimer()
         
        self.view.userInteractionEnabled = false
+        
+        
     }
     
     func startTimer() {
@@ -56,9 +66,6 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate {
         if ((timer == nil)) {
             timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ViewController.updateSpeed), userInfo: nil, repeats: true)
         }
-        
-        
-        
     }
     
     
@@ -88,7 +95,6 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate {
             
             reduceSpeed()
         }
-        
     }
     
     
@@ -108,6 +114,8 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate {
             stopTimer()
             
             self.view.userInteractionEnabled = true
+            
+            bringTravelBackButtonBack()
             
         }
     }
@@ -141,6 +149,43 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate {
     }
 
     
+    // MARK: - Week 6 add UIDynamics to project
+    
+    lazy var animator: UIDynamicAnimator = {
+        return UIDynamicAnimator(referenceView: self.view)
+    }()
+    
+    lazy var gravity:UIGravityBehavior = {
+        let lazyGravity = UIGravityBehavior()
+        return lazyGravity
+    }()
+    
+    func animateTravelBackButton(){
+        
+        gravity.addItem(travelBackButton)
+        gravity.gravityDirection = CGVectorMake(0, 0.8)
+        animator.addBehavior(gravity)
+        
+    }
+    
+    func resetTravelBackButton() {
+        self.animator.removeAllBehaviors()
+        UIView.animateWithDuration(0.45, animations: {() -> Void in
+            self.travelBackButton.bounds = self.originalBounds
+            self.travelBackButton.center = self.originalCenter
+            self.travelBackButton.transform = CGAffineTransformIdentity
+        })
+    }
+    
+    func bringTravelBackButtonBack(){
+        
+        resetTravelBackButton()
+        
+        NSLayoutConstraint(item: travelBackButton, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0.0).active = true
+        NSLayoutConstraint(item: travelBackButton, attribute: .Top, relatedBy: .Equal, toItem: speedLabel, attribute: .Bottom, multiplier: 1.0, constant: 75.0).active = true
+        
+    }
+    
     
      // MARK: - Navigation
      
@@ -150,6 +195,7 @@ class ViewController: UIViewController, DatePickerViewControllerDelegate {
         if segue.identifier == "datePickerSegue" {
             let destination = segue.destinationViewController as! DatePickerViewController
             destination.delegate = self
+            travelBackButton.enabled = true
             
         }
         
